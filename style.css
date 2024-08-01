@@ -1,127 +1,104 @@
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
-
-#contentWrap {
-    padding-bottom: 9.5rem;
-    overflow: hidden;
-}
-
 /*start_Pc_mainPanel*/
 @media screen and (min-width:768px){
-#main_pc {
-        display: block;
+    #main_pc {
+            display: block;
+            width: 100%;
+            height: 0;
+            padding-top: 46.785vw;
+            overflow: hidden;
+            line-height: 2;
+            margin-bottom: 7.8rem;
+            position: relative;
+        }
+    .imglayer1 {
         width: 100%;
         height: 0;
-        padding-top: 46.785vw;
-        overflow: hidden;
-        line-height: 2;
-        margin-bottom: 7.8rem;
-        position: relative;
-    }
-.imglayer1 {
-    width: 100%;
-    height: 0;
-    padding-top: 50%;
-    background-image: url(img/image4.png);
-    background-repeat: repeat-x;
-    background-size: 1898px;
-    will-change: animation;
-    animation: bg-slider 15s linear infinite;
-    position: absolute;
-    left: 0;
-    top: 0;
-    /* border: solid 5px blueviolet; */
-}
-@keyframes bg-slider {
-	from { background-position: 0 0; }
-    to { background-position: 1898px 0; } 
-} 
-.layer1 { /*wave1*/
-    width: 100%;
-    height: 47.57vw;
-    position: absolute;
-    left: 0;
-    top: 9.5vw;
-}
-.layer1 svg path {
-		fill:#009E8A;
+        padding-top: 50%;
+        background-image: url(img/image4.png);
+        background-repeat: repeat-x;
+        background-size: 1898px;
         will-change: animation;
-		animation:wave linear 5s infinite;
-}
+        animation: bg-slider 15s linear infinite;
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+    @keyframes bg-slider {
+        from { background-position: 0 0; }
+        to { background-position: 1898px 0; } 
+    } 
+    .layer1 { /*wave1*/
+        width: 100%;
+        height: 47.57vw;
+        position: absolute;
+        left: 0;
+        top: 9.5vw;
+    }
+    .layer1 svg path {
+            fill:#009E8A;
+            will-change: animation;
+            animation:wave linear 5s infinite;
+    }
 
-@keyframes wave {
-        from {
-            transform:translate(-2000px);
-        }
-        to {
-            transform:translate(0);
-        }
-}
-.layer2 {
-    background-image: url(/asset/img/top/main_ttl_pc.svg);
-    background-size: 100% auto;
-    position: absolute;
-    left: 0;
-    top: 22.85%;
-    width: 100%;
-    height: 0;
-    padding-top: 45%;
-}
-.imglayer2 {
-    width: 100%;
-    height: 0;
-    padding-top: 21vw;
-    background-image: url(/asset/img/top/img_down.png);
-    background-repeat: repeat-x;
-    background-position: left bottom;
-    will-change: animation;
-    animation: bg-slider2 15s linear infinite;
-    position: absolute;
-    left: 0;
-    bottom: 0;   
-    clip-path: url(#midWave);
-    overflow: hidden;
-}
-@keyframes bg-slider2 {
-	from { background-position: 0 0; }
-    to { background-position: -1958px 0; } 
-}
-#midWave {
-    will-change: animation;
-    animation:midWave 5s linear infinite;
-}
-@keyframes midWave {
-    from {
-        transform:translate(0%);
+    @keyframes wave {
+            from { transform:translate(-2000px); }
+            to { transform:translate(0); }
     }
-    to {
-        transform:translate(-40%);
+    .layer2 {
+        background-image: url(/img/main_ttl_pc.svg);
+        background-size: 100% auto;
+        position: absolute;
+        left: 0;
+        top: 22.85%;
+        width: 100%;
+        height: 0;
+        padding-top: 45%;
     }
-}
-.layer3 { /*wave2*/
-    overflow:hidden;
-    width: 100%;
-    height: 9vw;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-}
-.layer3 svg path {
-		fill:#fff;
+    .imglayer2 {
+        width: 100%;
+        height: 0;
+        padding-top: 21vw;
+        background-image: url(img/image4.png);
+        background-repeat: repeat-x;
+        background-position: left bottom;
         will-change: animation;
-		animation:wave2 linear 5s infinite;
-}
-@keyframes wave2 {
-    from {
-        transform:translate(0%);
+        animation: bg-slider2 15s linear infinite;
+        position: absolute;
+        left: 0;
+        bottom: 0;   
+        clip-path: url(#midWave);
+        overflow: hidden;
     }
-    to {
-        transform:translate(-25%);
+    @keyframes bg-slider2 {
+        from { background-position: 0 0; }
+        to { background-position: -1285px 0; } 
     }
-}
+    #midWave {
+        will-change: animation;
+        animation:midWave 3s linear infinite;
+    }
+    @keyframes midWave {
+        from{transform: translateX(0);}
+        to{transform: translateX(-1000px);}
+    }
+    .layer3 { /*wave2*/
+        overflow:hidden;
+        width: 100%;
+        height: 9vw;
+        height: 11vw;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+    }
+    .layer3 svg path {
+            fill:#fff;
+            will-change: animation;
+            animation:wave2 linear 5s infinite;
+    }
+    @keyframes wave2 {
+        from{transform: translateX(0);}
+        to{transform: translateX(-1200px);}
+    }
 }
 
 
@@ -132,10 +109,7 @@
  
 
 @media screen and (max-width: 767px) {
-    #contentWrap {
-        padding-bottom: 6rem;
-    }
-    
+        
     #main_pc {
         display: none;
     }
@@ -151,20 +125,19 @@
         height: 0;
         padding-top: 90.93vw;
         background-image: url(img/image4.png);
-        /* background-size: auto 100%; */
+        background-size: 2656px;
         background-repeat: repeat-x;
         will-change: animation;
-        animation: bg-slider_sp 15s linear infinite;
+        animation: bg-slider_sp 25s linear infinite;
         position: absolute;
         left: 0;
         top: 0;
     }
     @keyframes bg-slider_sp {
-        from { background-position: -1285px 0; }
+        from { background-position: -2656px 0; }
         to { background-position: 0 0; } 
     } 
     .layer1_sp { /*sp_wave1*/
-        overflow:hidden;
         width: 100%;
         height: 113.33vw;
         position: absolute;
@@ -177,67 +150,51 @@
             animation:wave_sp linear 5s infinite;
     }
     @keyframes wave_sp {
-            from {
-                transform:translate(-50%);
-            }
-            to {
-                transform:translate(0%);
-            }
+            from { transform:translate(-50%); }
+            to { transform:translate(0%); }
     }
     .layer2_sp {
-        background-image: url(/asset/img/top/main_ttl_sp.png);
+        background-image: url(/img//main_ttl_sp.png);
         background-size: cover;
         position: absolute;
         left: 0;
         top: 0;
         width: 100%;
         height: 0;
-        padding-top: 180.53vw;
+        padding-top: 180vw;
     }
     .imglayer2_sp {
         width: 100%;
         height: 0;
-        padding-top: 81.6vw;
-        background-image: url(/asset/img/top/img_down_sp.png);
-        background-size: auto 100%;
+        padding-top: 50vw;
+        background-image: url(/img/img_down_sp.png);
         background-repeat: repeat-x;
         background-position: left bottom;
         will-change: animation;
         animation: bg-slider2_sp 15s linear infinite;
         position: absolute;
         left: 0;
-        bottom: -8%;   
+        bottom: 0;   
         clip-path: url(#midWave_sp);
-        overflow: hidden;
     }
     @keyframes bg-slider2_sp {
         from { background-position: 0 0; }
-        to { background-position: -1282px 0; } 
+        to { background-position: -2564px 0; } 
     }
     #midWave_sp {
         will-change: animation;
-        animation:midWave_sp 5s linear infinite;
+        animation:midWave_sp 3s linear infinite;
     }
     @keyframes midWave_sp {
-        from {
-            transform:translate(0%);
-        }
-        to {
-            transform:translate(-56.92%);
-        }
+        from { transform:translate(0%); }
+        to { transform:translate(-50%); }
     }
     .layer3_sp { /*wave2*/
-        overflow:hidden;
         width: 100%;
         height: 9vw;        
         position: absolute;
         left: 0;
         bottom: 0;
-    }
-    @media screen and (max-width: 375px) {
-        .layer3_sp {
-            height: 10.13vw;
-        }
     }
     .layer3_sp svg path {
             fill:#fff;
@@ -245,13 +202,8 @@
             animation:wave2_sp linear 5s infinite;
     }
     @keyframes wave2_sp {
-        from {
-            transform:translate(-10%);
-        }
-        to {
-            transform:translate(-44%);
-        }
+        from { transform:translate(0); }
+        to { transform:translate(-1000px); }
     }
-    /*end_Sp_mainPanel*/    
-    
+    /*end_Sp_mainPanel*/
 }
