@@ -1,5 +1,8 @@
 /*start_Pc_mainPanel*/
 @media screen and (min-width:768px){
+    #main_sp {
+        display: none;
+    }
     #main_pc {
             display: block;
             width: 100%;
@@ -85,7 +88,6 @@
         overflow:hidden;
         width: 100%;
         height: 9vw;
-        height: 11vw;
         position: absolute;
         left: 0;
         bottom: 0;
@@ -103,9 +105,6 @@
 
 
 /*End_pc_mainPanel*/
-#main_sp {
-    display: none;
-}
  
 
 @media screen and (max-width: 767px) {
@@ -115,9 +114,9 @@
     }
     /*start_Sp_mainPanel*/
     #main_sp {
+        display: block;
         padding-top: 93.34vw;
         position: relative;
-        display: block;
         overflow: hidden;
     }
     .imglayer1_sp {
@@ -174,8 +173,9 @@
         animation: bg-slider2_sp 15s linear infinite;
         position: absolute;
         left: 0;
-        bottom: 0;   
+        bottom: -8%;   
         clip-path: url(#midWave_sp);
+        
     }
     @keyframes bg-slider2_sp {
         from { background-position: 0 0; }
@@ -187,17 +187,18 @@
     }
     @keyframes midWave_sp {
         from { transform:translate(0%); }
-        to { transform:translate(-50%); }
+        to { transform:translate(-1000px); }
     }
     .layer3_sp { /*wave2*/
         width: 100%;
-        height: 9vw;        
+        height: 10vw;        
         position: absolute;
         left: 0;
         bottom: 0;
     }
     .layer3_sp svg path {
             fill:#fff;
+            fill:gray;
             will-change: animation;
             animation:wave2_sp linear 5s infinite;
     }
