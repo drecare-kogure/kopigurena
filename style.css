@@ -49,7 +49,7 @@
             to { transform:translate(0); }
     }
     .layer2 {
-        background-image: url(/img/main_ttl_pc.svg);
+        background-image: url(https://raw.githubusercontent.com/drecare-kogure/kopigurena/bf0eda3a0fc3874fdac164cff7277ddbe68936be/img/main_ttl_pc.svg);
         background-size: 100% auto;
         position: absolute;
         left: 0;
