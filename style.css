@@ -8,6 +8,7 @@
             width: 100%;
             height: 0;
             padding-top: 46.785vw;
+            max-height: 100vh;
             overflow: hidden;
             line-height: 2;
             margin-bottom: 7.8rem;
@@ -57,11 +58,24 @@
         height: 0;
         padding-top: 45%;
     }
+
+    .topTitle{
+        position: absolute;
+        font-size: 2vw;
+        top: 3%;
+        left: 10%;
+    }
+
+    .topTitle h1,p{
+        margin: 10px;
+    }
+
     .imglayer2 {
         width: 100%;
         height: 0;
         padding-top: 21vw;
         background-image: url(img/image4.png);
+        background-size: 1958px;
         background-repeat: repeat-x;
         background-position: left bottom;
         will-change: animation;
@@ -74,7 +88,7 @@
     }
     @keyframes bg-slider2 {
         from { background-position: 0 0; }
-        to { background-position: -1285px 0; } 
+        to { background-position: -1958px 0; } 
     }
     #midWave {
         will-change: animation;
@@ -95,7 +109,7 @@
     .layer3 svg path {
             fill:#fff;
             will-change: animation;
-            animation:wave2 linear 5s infinite;
+            animation:wave2 linear 2s infinite;
     }
     @keyframes wave2 {
         from{transform: translateX(0);}
@@ -122,7 +136,7 @@
     .imglayer1_sp {
         width: 100%;
         height: 0;
-        padding-top: 90.93vw;
+        padding-top: 90%;
         background-image: url(img/image4.png);
         background-size: 2656px;
         background-repeat: repeat-x;
@@ -138,10 +152,11 @@
     } 
     .layer1_sp { /*sp_wave1*/
         width: 100%;
-        height: 113.33vw;
+        height: 113vw;
+        height: 0vh;
         position: absolute;
         left: 0;
-        top: 58vw;
+        top: 50vw;
     }
     .layer1_sp svg path {
             fill:#009E8A;
@@ -154,7 +169,7 @@
     }
     .layer2_sp {
         background-image: url(/img//main_ttl_sp.png);
-        background-size: cover;
+        background-size: 100% auto;
         position: absolute;
         left: 0;
         top: 0;
@@ -167,13 +182,14 @@
         height: 0;
         padding-top: 50vw;
         background-image: url(/img/img_down_sp.png);
+        background-size: 2564px;
         background-repeat: repeat-x;
         background-position: left bottom;
         will-change: animation;
         animation: bg-slider2_sp 15s linear infinite;
         position: absolute;
         left: 0;
-        bottom: -8%;   
+        bottom: 0;   
         clip-path: url(#midWave_sp);
         
     }
