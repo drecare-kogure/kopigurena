@@ -1,4 +1,10 @@
-/*start_Pc_mainPanel*/
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/*Pc css*/
 @media screen and (min-width:768px){
     #main_sp {
         display: none;
@@ -20,16 +26,16 @@
         padding-top: 50%;
         background-image: url(img/image4.png);
         background-repeat: repeat-x;
-        background-size: 1898px;
+        background-size: auto 30vw;
         will-change: animation;
-        animation: bg-slider 15s linear infinite;
+        animation: bg-slider 10s linear infinite;
         position: absolute;
         left: 0;
         top: 0;
     }
     @keyframes bg-slider {
         from { background-position: 0 0; }
-        to { background-position: 1898px 0; } 
+        to { background-position: calc(30vw / 258 * 1285) 0; } 
     } 
     .layer1 { /*wave1*/
         width: 100%;
@@ -49,7 +55,7 @@
             to { transform:translate(0); }
     }
     .layer2 {
-        background-image: url(/img/main_ttl_pc.svg);
+        background-image: url(/img/ttl_pc.svg);
         background-size: 100% auto;
         position: absolute;
         left: 0;
@@ -64,10 +70,18 @@
         font-size: 2vw;
         top: 3%;
         left: 10%;
+        width: 30vw;
     }
 
     .topTitle h1,p{
         margin: 10px;
+    }
+
+    .layer2 img{
+        position: absolute;
+        top: 3%;
+        left: 20%;
+        width: 10vw;
     }
 
     .imglayer2 {
@@ -107,31 +121,32 @@
         bottom: 0;
     }
     .layer3 svg path {
-            fill:#fff;
+            fill:white;
             will-change: animation;
-            animation:wave2 linear 2s infinite;
+            animation:wave2 linear 3s infinite;
     }
     @keyframes wave2 {
-        from{transform: translateX(0);}
+        from{transform: translateX(0px);}
         to{transform: translateX(-1200px);}
     }
 }
 
-
-/*End_pc_mainPanel*/
  
-
+/*SmartPone css*/
 @media screen and (max-width: 767px) {
         
     #main_pc {
         display: none;
     }
-    /*start_Sp_mainPanel*/
-    #main_sp {
+    
+    #main_sp {        
         display: block;
-        padding-top: 93.34vw;
-        position: relative;
+        width: 100%;
+        height: 0;
+        padding-top: 170vw;
+        max-height: 100vh;
         overflow: hidden;
+        position: relative;
     }
     .imglayer1_sp {
         width: 100%;
@@ -156,7 +171,7 @@
         height: 0vh;
         position: absolute;
         left: 0;
-        top: 50vw;
+        top: 30vw;
     }
     .layer1_sp svg path {
             fill:#009E8A;
@@ -164,12 +179,14 @@
             animation:wave_sp linear 5s infinite;
     }
     @keyframes wave_sp {
-            from { transform:translate(-50%); }
+            from { transform:translate(-1400px); }
             to { transform:translate(0%); }
     }
     .layer2_sp {
-        background-image: url(/img//main_ttl_sp.png);
+        background-image: url(/img/ttl_sp2.png);
         background-size: 100% auto;
+        background-repeat: no-repeat;
+        background-position: 0 50vw;
         position: absolute;
         left: 0;
         top: 0;
@@ -177,52 +194,60 @@
         height: 0;
         padding-top: 180vw;
     }
+
+    .topTitle_sp{
+        position: absolute;
+        font-size: 5vw;
+        top: 39%;
+        left: 8%;
+    }
+
+    .topTitle_sp h1,p{
+        margin: 10px;
+    }
+
     .imglayer2_sp {
         width: 100%;
         height: 0;
-        padding-top: 50vw;
-        background-image: url(/img/img_down_sp.png);
-        background-size: 2564px;
+        padding-top: 70vw;
+        background-image: url(/img/image4.png);
+        background-size: 2500px;
         background-repeat: repeat-x;
-        background-position: left bottom;
+        background-position: left center;
         will-change: animation;
         animation: bg-slider2_sp 15s linear infinite;
         position: absolute;
         left: 0;
-        bottom: 0;   
+        bottom: 10vw;   
         clip-path: url(#midWave_sp);
         
     }
     @keyframes bg-slider2_sp {
         from { background-position: 0 0; }
-        to { background-position: -2564px 0; } 
+        to { background-position: -2500px 0; } 
     }
     #midWave_sp {
         will-change: animation;
         animation:midWave_sp 3s linear infinite;
     }
     @keyframes midWave_sp {
-        from { transform:translate(0%); }
-        to { transform:translate(-1000px); }
-    }
-    .layer3_sp { /*wave2*/
-        width: 100%;
-        height: 10vw;
-        height: 10%;
-        margin-bottom: -3%;       
-        position: absolute;
-        left: 0;
-        bottom: 0;
-    }
-    .layer3_sp svg path {
-            fill:#fff;
-            fill:gray;
-            will-change: animation;
-            animation:wave2_sp linear 5s infinite;
-    }
-    @keyframes wave2_sp {
         from { transform:translate(0); }
         to { transform:translate(-1000px); }
     }
-    /*end_Sp_mainPanel*/
+    .layer3_sp {
+        width: 100%;
+        position: absolute;
+        left: 0;
+        bottom:7vw;
+    }
+    
+    .layer3_sp svg path {
+            fill:#fff;
+            will-change: animation;
+            animation:wave2_sp linear 2s infinite;
+    }
+    @keyframes wave2_sp {
+        from { transform:translate(-1000px); }
+        to { transform:translate(0); }
+    }
 }
