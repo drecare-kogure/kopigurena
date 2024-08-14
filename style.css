@@ -59,7 +59,7 @@
             to { transform:translate(0); }
     }
     .layer2 {
-        background-image: url(/img/ttl_pc.svg);
+        background-image: url(https://raw.githubusercontent.com/drecare-kogure/kopigurena/6605a8037fd4aedbc012e99d595b45fb9e594765/img/ttl_pc.svg);
         background-size: 100% auto;
         position: absolute;
         left: 0;
@@ -188,7 +188,7 @@
             to { transform:translate(0%); }
     }
     .layer2_sp {
-        background-image: url(/img/ttl_sp2.png);
+        background-image: url(https://raw.githubusercontent.com/drecare-kogure/kopigurena/6605a8037fd4aedbc012e99d595b45fb9e594765/img/ttl_sp2.png);
         background-size: 100% auto;
         background-repeat: no-repeat;
         background-position: 0 50vw;
@@ -215,7 +215,7 @@
         width: 100%;
         height: 0;
         padding-top: 70vw;
-        background-image: url(/img/image4.png);
+        background-image: url(https://raw.githubusercontent.com/drecare-kogure/kopigurena/6605a8037fd4aedbc012e99d595b45fb9e594765/img/image4.png);
         background-size: 2500px;
         background-repeat: repeat-x;
         background-position: left center;
