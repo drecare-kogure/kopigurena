@@ -26,7 +26,9 @@
         padding-top: 50%;
         background-image: url(img/image4.png);
         background-repeat: repeat-x;
-        background-size: auto 30vw;
+        background-size: 1898px;
+        /* スライド画像レスポンシブ */
+        /* background-size: auto 30vw; */
         will-change: animation;
         animation: bg-slider 10s linear infinite;
         position: absolute;
@@ -35,7 +37,9 @@
     }
     @keyframes bg-slider {
         from { background-position: 0 0; }
-        to { background-position: calc(30vw / 258 * 1285) 0; } 
+        to { background-position: 1898px 0; } 
+        /* スライド画像レスポンシブ */
+        /* to { background-position: calc(30vw / 258 * 1285) 0; }  */
     } 
     .layer1 { /*wave1*/
         width: 100%;
@@ -77,12 +81,13 @@
         margin: 10px;
     }
 
-    .layer2 img{
+    /* タイトル部画像挿入テスト */
+    /* .layer2 img{
         position: absolute;
-        top: 3%;
-        left: 20%;
-        width: 10vw;
-    }
+        top: 5%;
+        left: 28%;
+        width: 7vw;
+    } */
 
     .imglayer2 {
         width: 100%;
@@ -126,8 +131,8 @@
             animation:wave2 linear 3s infinite;
     }
     @keyframes wave2 {
-        from{transform: translateX(0px);}
-        to{transform: translateX(-1200px);}
+        from{transform: translateX(-1200px);}
+        to{transform: translateX(0px);}
     }
 }
 
